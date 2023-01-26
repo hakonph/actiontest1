@@ -1,0 +1,11 @@
+name: 'test'
+description: 'tester actions'
+inputs:
+  kake:
+    description: 'path tue file'
+    required: true
+runs:
+  using: docker
+  image: application:0.60.0-SNAPSHOT
+  args:
+    - ${{ inputs.path-to-file }}
